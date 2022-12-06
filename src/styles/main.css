@@ -1,0 +1,307 @@
+@import './resto-detail.css';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #424242;
+}
+
+/* Skip to main content */
+
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  background-color: #354259;
+  color: white;
+  padding: 20px;
+  z-index: 100;
+}
+ 
+.skip-link:focus {
+   top: 0;
+}
+
+/*
+ * Header
+ *
+ */
+
+ .header {
+  min-height: 56px;
+  transition: min-height 0.3s;
+}
+
+.header__inner {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.header__title {
+  width: 80px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: inline-block;
+  margin-left: 30px;
+  color: #354259;
+  text-transform: uppercase;
+  font-size: 22px;
+  user-select: none;
+}
+
+.header__menu {
+  font-size: 32px;
+  margin: 10px auto;
+  display: block;
+  width: 50px;
+  background-color: white;
+  border: none;
+}
+
+
+/*
+ * Top level navigation
+ */
+
+.nav {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.nav__list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.nav a {
+  display: inline-block;
+  padding: 20px;
+  padding-top: 20px;
+  text-decoration: none;
+  color: #616161;
+  font-size: 13px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+
+/*
+ * Jumbotron
+ */
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 500px;
+  font-weight: 300;
+  width: 100%;
+  text-align: center;
+  background-position: center;
+  background-color: green;
+  background-image: url("../public/images/heros/hero-image_4.jpg");
+}
+  @media
+    (-webkit-min-device-pixel-ratio: 2), 
+    (min-resolution: 192dpi) {
+    .hero {
+      background-image: url("../public/images/heros/hero-image_4.jpg");
+    }
+  }
+  @media
+    (min-width: 800px) {
+    .hero {
+      background-image: url("../public/images/heros/hero-image_4.jpg");
+    }
+  }
+  @media
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 800px), 
+    (min-resolution: 192dpi) and (min-width: 800px) {
+    .hero {
+      background-image: url("../public/images/heros/hero-image_4.jpg");
+  }
+}
+
+.hero__inner {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.hero__title {
+  color: #fff;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+.hero__tagline {
+  color: #fff;
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+
+/*
+ * main
+ */
+
+ .container {
+  margin: 2em 10%;
+  padding: 1em;
+}
+
+.main-content__title {
+  text-align: center;
+  margin-bottom: 0.5em;
+  font-size: 25px;
+}
+
+#explore-restaurant {
+  display: grid;
+  grid-row-gap: 1.5em;
+  padding-top: 1.5em;
+}
+
+/*
+ * post item
+ */
+
+ .card {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 5px 3px 3px 3px #354259;
+  color: black;
+}
+
+.card-a-tag {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.movie-item__header__rating {
+  position: absolute;
+  padding: 8px;
+  bottom: 20px;
+  left: 0;
+  display: inline-block;
+  background-color: black;
+  color: white;
+}
+
+.img-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+}
+
+.card-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1em;
+}
+
+.card-content {
+  padding: 1.4em 2em;
+  font-size: small;
+  text-align: center;
+}
+
+.card-content-title {
+  font-weight: bold;
+  color: var(--btn);
+  padding: 0.5em;
+}
+
+.penjelasan {
+  padding: 0.2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 15;
+  -webkit-box-orient: vertical;
+  text-align: justify;
+}
+
+/* Focus */
+.card:focus{
+  outline: 2px solid yellow;
+}
+
+button:focus {
+  outline: 2px solid yellow;
+}
+ 
+a:focus{
+  outline: 2px solid yellow;
+}
+
+h1:focus{
+  outline: 2px solid yellow;
+}
+
+h2:focus{
+  outline: 2px solid yellow;
+}
+
+h3:focus{
+  outline: 2px solid yellow;
+}
+
+p:focus{
+  outline: 2px solid yellow;
+}
+
+img:focus{
+  outline: 2px auto yellow;
+}
+
+label{
+  display: none;
+}
+
+/* Footer */
+.footer-nav {
+  padding: 30px;
+  color: white;    
+  background-color: #354259;
+  text-align: center;
+}
